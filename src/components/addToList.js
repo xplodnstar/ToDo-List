@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
+// import { connect } from 'react-redux'
 import '../styles/base.css'
 import { FaPlusSquare } from 'react-icons/fa'
 // import { FaRegPlusSquare } from 'react-icons/fa'
@@ -10,30 +10,28 @@ class AddToList extends Component {
     state = {
         entry: '',
     }
-    // handleSubmit = handleSubmit.bind(this)
 
-    handleOptionChange = (e) => {
+    handleChange = (e) => {
         this.setState({
-            entry: e.target.value
-        });
+            [e.target.name]: e.target.value,
+        })
     }
 
     handleSubmit = (e) => {
-        e.preventDefault();
+        e.preventDefault()
         if (this.state.entry !== '') {
             addNew(this.state.entry)
-            this.setState.state({
+            this.setState({
                 entry: ''
             })
         }
-        // console.log(currItems)
     };
 
     render() {
         return (
-            <form>
+            <form onSubmit={this.handleSubmit}>
                 <div className="addToList">
-                    <input type="text" className="newItem" placeholder="New Item"></input>
+                    <input type="text" name="entry" className="newItem" placeholder="New Item" value={this.state.entry} onChange={this.handleChange}></input>
                     <button type="submit" className="addButton" id="add">
                         <div className="add1"><FaPlusSquare></FaPlusSquare></div>
                         {/* <div className="add2"><FaRegPlusSquare></FaRegPlusSquare></div> */}
@@ -44,10 +42,10 @@ class AddToList extends Component {
     }
 }
 
-function mapStateToProps(appState) {
-    return {
-        currItems: appState.entry
-    }
-}
+// function mapStateToProps(appState) {
+//     return {
+//         currItems: appState.entry
+//     }
+// }
 
-export default connect(mapStateToProps)(AddToList)
+export default AddToList

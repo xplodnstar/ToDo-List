@@ -44,6 +44,7 @@ body {
   margin: auto;
   display: flex;
   justify-content: space-around;
+  align-content: flex-start;
   background-color: lavender;
 }
 
@@ -78,6 +79,7 @@ button {
   font-size: 24px;
   padding: 5px;
   outline: none;
+  border: solid 1px indigo;
 }
 
 /* addButton button */
@@ -106,6 +108,8 @@ button {
   height: 50px;
   background-color: azure;
   margin: 5px 0;
+  font-size: 24px;
+  padding: 10px;
 }
 
 .endButtons {
@@ -128,6 +132,8 @@ button {
   width: 450px;
   margin: auto;
   border: solid 1px rebeccapurple;
+  color: indigo;
+  text-align: center;
 }
 
 /* completeItem div */
@@ -146,6 +152,8 @@ button {
   height: 50px;
   background-color: azure;
   margin: 5px 0;
+  font-size: 24px;
+  padding: 10px;
 }
 
 /* delete button */

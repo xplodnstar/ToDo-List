@@ -3,76 +3,41 @@ import store from '../store'
 import dictionary from '../actions/dictionary'
 
 
+let id = 0
+
 // add new item from text box to current list
 export function addNew(entry) {
-    // currItems.splice(0, 0, add)
-    // return {
-    //     currItems: currItems
-    // }
+    id++
     store.dispatch({
         type: dictionary.ADD_NEW,
-        newItem: entry,
-        // currItems: currItems
+        todo: {
+            text: entry,
+            status: 'pending',
+            id: id
+        }
     })
 }
 
-// // move item from current list to completed list
-// export function checkComp() {
-//     var moveItem = currItems.splice('index of item', 1)
-//     compItems.splice(0, 0, moveItem)
-//     return {
-//         currItems: currItems,
-//         compItems: compItems
-//     }
-//     store.dispatch({
-//         type: dictionary.CHECK_COMP,
-//         currItems: currItems,
-//         compItems: compItems
-//     })
-// }
+// move item from current list to completed list
+export function checkComp(id) {
+    store.dispatch({
+        type: dictionary.CHECK_COMP,
+        id: id,
+    })
+}
 
-// // // edit specific item from current list
-// // export function openEdit() {
-// //     // open current item for editing
+// remove the specific item from current list
+export function remCurr(id) {
+    store.dispatch({
+        type: dictionary.REM_CURR,
+        id: id,
+    })
+}
 
-// //     store.dispatch({
-// //         type: dictionary.OPEN_EDIT,
-// //         currItems: currItems
-// //     })
-// // }
-
-// // update the specific item in current list with entered text
-// export function updEdit() {
-//     currItems.splice('index of item', 0, 'text of input')
-//     return {
-//         currItems: currItems
-//     }
-//     store.dispatch({
-//         type: dictionary.UPD_EDIT,
-//         currItems: currItems
-//     })
-// }
-
-// // remove the specific item from current list
-// export function remCurr() {
-//     currItems.splice('index of item', 1)
-//     return {
-//         currItems: currItems
-//     }
-//     store.dispatch({
-//         type: dictionary.REM_CURR,
-//         currItems: currItems
-//     })
-// }
-
-// // remove the specific item from completed list
-// export function remComp() {
-//     compItems.splice('index of item', 1)
-//     return {
-//         compItems: compItems
-//     }
-//     store.dispatch({
-//         type: dictionary.REM_CURR,
-//         compItems: compItems
-//     })
-// }
+// remove the specific item from completed list
+export function remComp(id) {
+    store.dispatch({
+        type: dictionary.REM_CURR,
+        id: id,
+    })
+}
