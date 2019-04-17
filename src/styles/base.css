@@ -9,14 +9,146 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+/* wholeList div */
+.wholeList {
+  width: 1000px;
+  margin: auto;
+}
+
+/* header div */
+.header {
+  width: 300px;
+  height: 65px;
+  margin: 10px auto;
+  padding:1px;
+  background-color: indigo;
+  color: lavender;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* title h1 */
+.title {
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+/* list div */
+.list {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  background-color: lavender;
+}
+
+button {
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+  color: indigo;
+  font-size: 26px;
+  padding: 1px;
+  margin: auto;
+  text-align: center;
+  outline: none;
+}
+
+/* currentList div */
+.currentList {
+  width: 450px;
+  margin: auto;
+  border: solid 1px rebeccapurple;
+}
+
+/* addToList div */
+.addToList {
+  display: flex;
+}
+
+/* newItem input */
+.newItem {
+  width: 100%;
+  height: 50px;
+  font-size: 24px;
+  padding: 5px;
+  outline: none;
+}
+
+/* addButton button */
+.addButton {
+
+}
+
+/* currentItem div */
+.currentItem {
+  width: 110%;
+  height: 62px;
+  border: solid 1px black;
+  display: flex;
+  list-style: none;
+  margin: 0 0 0 -40px;
+}
+
+/* markComplete button */
+.markComplete {
+
+}
+
+/* currentText p */
+.currentText {
+  width: 100%;
+  height: 50px;
+  background-color: azure;
+  margin: 5px 0;
+}
+
+.endButtons {
+  display: flex;
+  flex-direction: column;
+}
+
+/* edit button */
+.edit {
+
+}
+
+/* delete button */
+.delete {
+
+}
+
+/* completeList div */
+.completeList {
+  width: 450px;
+  margin: auto;
+  border: solid 1px rebeccapurple;
+}
+
+/* completeItem div */
+.completeItem {
+  width: 110%;
+  height: 62px;
+  border: solid 1px black;
+  display: flex;
+  list-style: none;
+  margin: 0 0 0 -40px;
+}
+
+/* completeText p */
+.completeText {
+  width: 100%;
+  height: 50px;
+  background-color: azure;
+  margin: 5px 0;
+}
+
+/* delete button */
+.delete {
+
 }
