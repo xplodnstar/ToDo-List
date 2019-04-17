@@ -22,7 +22,7 @@ body {
 
 /* header div */
 .header {
-  width: 300px;
+  width: 400px;
   height: 65px;
   margin: 10px auto;
   padding:1px;
@@ -38,19 +38,11 @@ body {
   font-weight: bolder;
 }
 
-/* list div */
-.list {
-  width: 100%;
-  margin: auto;
-  display: flex;
-  justify-content: space-around;
-  align-content: flex-start;
-  background-color: lavender;
-}
-
+/* all buttons */
 button {
   width: 30px;
   height: 30px;
+  border: none;
   border-radius: 3px;
   color: indigo;
   font-size: 26px;
@@ -60,56 +52,72 @@ button {
   outline: none;
 }
 
-/* currentList div */
-.currentList {
-  width: 450px;
-  margin: auto;
-  border: solid 1px rebeccapurple;
-}
-
 /* addToList div */
 .addToList {
+  width: 500px;
+  margin: auto;
   display: flex;
+  justify-content: space-between;
+  position: relative;
 }
 
 /* newItem input */
 .newItem {
-  width: 100%;
+  width: 500px;
   height: 50px;
   font-size: 24px;
-  padding: 5px;
+  margin: auto;
+  padding: 5px 10px;
   outline: none;
   border: solid 1px indigo;
 }
 
 /* addButton button */
 .addButton {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+/* list div */
+.list {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-content: flex-start;
+}
+
+.lists h2 {
+  color: indigo;
+  text-align: center;
+}
+
+/* currentList div */
+.currentList {
+  width: 450px;
+  margin: 10px 0 0 10px;
 
 }
+
 
 /* currentItem div */
 .currentItem {
   width: 110%;
   height: 62px;
-  border: solid 1px black;
   display: flex;
   list-style: none;
   margin: 0 0 0 -40px;
-}
-
-/* markComplete button */
-.markComplete {
-
 }
 
 /* currentText p */
 .currentText {
   width: 100%;
   height: 50px;
-  background-color: azure;
   margin: 5px 0;
   font-size: 24px;
   padding: 10px;
+  color: rebeccapurple;
 }
 
 .endButtons {
@@ -117,30 +125,16 @@ button {
   flex-direction: column;
 }
 
-/* edit button */
-.edit {
-
-}
-
-/* delete button */
-.delete {
-
-}
-
 /* completeList div */
 .completeList {
   width: 450px;
-  margin: auto;
-  border: solid 1px rebeccapurple;
-  color: indigo;
-  text-align: center;
+  margin: 10px 10px 0 0;
 }
 
 /* completeItem div */
 .completeItem {
   width: 110%;
   height: 62px;
-  border: solid 1px black;
   display: flex;
   list-style: none;
   margin: 0 0 0 -40px;
@@ -150,13 +144,9 @@ button {
 .completeText {
   width: 100%;
   height: 50px;
-  background-color: azure;
   margin: 5px 0;
   font-size: 24px;
   padding: 10px;
-}
-
-/* delete button */
-.delete {
-
+  text-align: left;
+  color: rebeccapurple;
 }

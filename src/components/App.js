@@ -15,9 +15,9 @@ class App extends Component {
           <header className="header">
             <h1 className="title">Nova's To-Do List</h1>
           </header>
+          <AddToList></AddToList>
           <div className="list">
             <div className="currentList">
-              <AddToList></AddToList>
               <CurrentList></CurrentList>
             </div>
             <div className="completeList">

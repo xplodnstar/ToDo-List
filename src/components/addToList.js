@@ -25,27 +25,22 @@ class AddToList extends Component {
                 entry: ''
             })
         }
-    };
+    }
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
-                <div className="addToList">
+            <div className="addToList">
+                <form onSubmit={this.handleSubmit}>
                     <input type="text" name="entry" className="newItem" placeholder="New Item" value={this.state.entry} onChange={this.handleChange}></input>
                     <button type="submit" className="addButton" id="add">
                         <div className="add1"><FaPlusSquare></FaPlusSquare></div>
                         {/* <div className="add2"><FaRegPlusSquare></FaRegPlusSquare></div> */}
                     </button>
-                </div>
-            </form>
+                </form>
+            </div>
         )
     }
 }
 
-// function mapStateToProps(appState) {
-//     return {
-//         currItems: appState.entry
-//     }
-// }
 
 export default AddToList

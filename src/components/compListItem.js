@@ -12,7 +12,7 @@ class CompListItem extends Component {
     render() {
         return (
             <li className="completeItem">
-                <p className="completeText"></p>
+                <p className="completeText">{this.props.text}</p>
                 <button className="delete" id="delComp" onClick={this.handleDelete}>
                     <div className="delComp1"><FaTrashAlt></FaTrashAlt></div>
                     {/* <div className="delComp2"><FaRegTrashAlt></FaRegTrashAlt></div> */}

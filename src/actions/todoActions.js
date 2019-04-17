@@ -37,7 +37,7 @@ export function remCurr(id) {
 // remove the specific item from completed list
 export function remComp(id) {
     store.dispatch({
-        type: dictionary.REM_CURR,
+        type: dictionary.REM_COMP,
         id: id,
     })
 }

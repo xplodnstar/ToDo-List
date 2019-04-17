@@ -12,42 +12,22 @@ export default function todoReducer(state = initialState, action) {
 
     case dictionary.CHECK_COMP:
       return {
-        ...state, compItems: state.currItems.map(todo => {
-          if (todo.id === action.id) {
-            return {
-              text: todo.text,
-              status: 'complete',
-              id: todo.id
-            }
-          } else {
-            return todo
-          }
-        }).filter(todo => {
-          if (todo.status === 'complete') {
-            return todo
-          }
-        }), currItems: state.currItems.filter(todo => {
-          if (todo.status !== 'complete') {
-            return todo
-          }
-        })
+        ...state,
+        compItems: [state.currItems.find(todo => todo.id === action.id), ...state.compItems],
+        currItems: state.currItems.filter(todo => todo.id !== action.id)
       }
 
     case dictionary.REM_CURR:
       return {
         ...state, currItems: state.currItems.filter(todo => {
-          if (todo.id !== action.id) {
-            return todo
-          }
+          return todo.id !== action.id
         })
       }
 
     case dictionary.REM_COMP:
       return {
         ...state, compItems: state.compItems.filter(todo => {
-          if (todo.id !== action.id) {
-            return todo
-          }
+          return todo.id !== action.id
         })
       }
 

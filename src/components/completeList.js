@@ -5,8 +5,8 @@ import CompListItem from './compListItem'
 class CompleteList extends Component {
     render() {
         return (
-            <div>
-                <h2>Completed</h2>
+            <div className="lists">
+                <h2>{this.props.compItems.length} items Completed</h2>
                 <ul>
                     {this.props.compItems.map(todo => (
                         <CompListItem {...todo} key={'comp' + todo.id} ></CompListItem>
